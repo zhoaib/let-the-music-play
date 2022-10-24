@@ -1,5 +1,11 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import a from '../../../images/a.jpg'
+import b from '../../../images/b.jpg'
+import c from '../../../images/c.jpg'
+import d from '../../../images/d.jpg'
+import e from '../../../images/e.jpg'
+import f from '../../../images/f.jpg'
 
 const CourseCarousel = () => {
     return (
@@ -8,7 +14,7 @@ const CourseCarousel = () => {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="holder.js/800x400?text=First slide&bg=373940"
+                    src={a}
                     alt="First slide"
                 />
             </Carousel.Item>
@@ -16,7 +22,7 @@ const CourseCarousel = () => {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="holder.js/800x400?text=Second slide&bg=282c34"
+                    src={b}
                     alt="Second slide"
                 />
             </Carousel.Item>
@@ -24,10 +30,35 @@ const CourseCarousel = () => {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="holder.js/800x400?text=Third slide&bg=20232a"
+                    src={c}
                     alt="Third slide"
                 />
             </Carousel.Item>
+
+            <Carousel.Item>
+                <img
+                    className="d-block w-100"
+                    src={d}
+                    alt="Forth slide"
+                />
+            </Carousel.Item>
+
+            <Carousel.Item>
+                <img
+                    className="d-block w-100"
+                    src={e}
+                    alt="Forth slide"
+                />
+            </Carousel.Item>
+
+            <Carousel.Item>
+                <img
+                    className="d-block w-100"
+                    src={f}
+                    alt="Forth slide"
+                />
+            </Carousel.Item>
+
 
         </Carousel>
     );
