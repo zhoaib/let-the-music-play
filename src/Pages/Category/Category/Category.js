@@ -1,6 +1,5 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import Courses from '../../Courses/Courses/Courses';
 import CourseCard from '../../Shared/CourseCard/CourseCard';
 
 
