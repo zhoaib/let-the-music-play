@@ -35,7 +35,7 @@ const Header = () => {
                     <Nav className="me-auto">
                         <><Button variant='light'><Link to='/'>Courses</Link></Button></>
                         <Nav.Link href="#pricing">Pricing</Nav.Link>
-                        <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+                        <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">
                                 Another action

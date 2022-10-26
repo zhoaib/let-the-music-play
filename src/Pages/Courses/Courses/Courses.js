@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useReactToPrint } from 'react-to-print';
@@ -28,11 +28,13 @@ const Courses = () => {
                         <Card.Text>
                             {details}
                         </Card.Text>
-                        <Button variant="primary">Go somewhere</Button>
+
                     </Card.Body>
                 </Card>
             </div>
-
+            <div className='text-center mb-5'>
+                <Button variant="dark"><Link to='/checkout'>Get premium access</Link></Button>
+            </div>
         </>
     );
 };
