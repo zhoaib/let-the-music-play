@@ -22,7 +22,7 @@ const Home = () => {
 
 
 
-            <div className='w-25'>
+            <div className='w-25 mx-auto mt-4'>
                 <CourseCarousel></CourseCarousel>
             </div>
         </div>
