@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyC5dQK7uvtmlSdZ_2xR-oM2qqbJUX03bUg",
-    authDomain: "let-the-music-play-74042.firebaseapp.com",
-    projectId: "let-the-music-play-74042",
-    storageBucket: "let-the-music-play-74042.appspot.com",
-    messagingSenderId: "166862987627",
-    appId: "1:166862987627:web:ad9d41293457e1fd3cac2e"
+    apiKey: process.env.REACT_APP_apiKey,
+    authDomain: process.env.REACT_APP_authDomain,
+    projectId: process.env.REACT_APP_projectId,
+    storageBucket: process.env.REACT_APP_storageBucket,
+    messagingSenderId: process.env.REACT_APP_messagingSenderId,
+    appId: process.env.REACT_APP_appId,
 };
 
 // Initialize Firebase
