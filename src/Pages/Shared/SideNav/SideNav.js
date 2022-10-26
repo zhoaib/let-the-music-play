@@ -1,11 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { FaGoogle, FaGithub } from "react-icons/fa";
+import Button from 'react-bootstrap/Button';
+import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
+import { GoogleAuthProvider } from 'firebase/auth';
 
 
 const SideNav = () => {
+
+    const { providerLogin } = useContext(AuthContext);
+    const googleProvider = new GoogleAuthProvider()
+    const handleGoogleSignIn = () => {
+        providerLogin(googleProvider)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(error => console.error(error))
+    }
 
     const [categories, setCategories] = useState([]);
 
@@ -19,7 +32,7 @@ const SideNav = () => {
         <div>
             <div>
                 <ButtonGroup size="sm" className="mb-2">
-                    <Button className='me-2'><FaGoogle></FaGoogle>  Login with Google</Button>
+                    <Button onClick={handleGoogleSignIn} className='me-2'><FaGoogle></FaGoogle>  Login with Google</Button>
                     <Button><FaGithub></FaGithub> Login with Github</Button>
                 </ButtonGroup>
             </div>
