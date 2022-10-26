@@ -33,8 +33,9 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <><Button variant='light'><Link to='/'>Courses</Link></Button></>
-                        <Nav.Link href="#pricing">Pricing</Nav.Link>
+                        <><Button className='me-4' variant='dark'><Link to='/'>Courses</Link></Button></>
+                        <><Button variant='dark'><Link to='/blog'>Blog</Link></Button></>
+
                         <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">
@@ -52,13 +53,13 @@ const Header = () => {
                             {
                                 user?.uid ?
                                     <>
-                                        <span> {user?.displayName}</span>
+                                        <Button className='me-4' variant='dark'> {user?.displayName}</Button>
                                         <Button variant='dark' onClick={handleLogOut}>Logout</Button>
                                     </>
                                     :
                                     <>
-                                        <Link to='/login'>Login</Link>
-                                        <Link to='/register'>Register</Link>
+                                        <Button className='me-4' variant='dark'><Link to='/login'>Login</Link></Button>
+                                        <Button className='me-4' variant='dark'><Link to='/register'>Register</Link></Button>
                                     </>
                             }
                         </>
@@ -66,7 +67,7 @@ const Header = () => {
 
                             {
                                 user?.photoURL ?
-                                    <Image style={{ height: '30px' }} roundedCircle src={user?.photoURL}></Image>
+                                    <Image className='ms-4' style={{ height: '35px' }} roundedCircle src={user?.photoURL}></Image>
                                     : <FaUserAlt></FaUserAlt>
                             }
 
