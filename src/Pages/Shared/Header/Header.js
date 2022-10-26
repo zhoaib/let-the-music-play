@@ -33,7 +33,7 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link ><Button variant='light'><Link to='/'>Courses</Link></Button></Nav.Link>
+                        <><Button variant='light'><Link to='/'>Courses</Link></Button></>
                         <Nav.Link href="#pricing">Pricing</Nav.Link>
                         <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
@@ -48,7 +48,7 @@ const Header = () => {
                         </NavDropdown>
                     </Nav>
                     <Nav>
-                        <Nav.Link href="#deets">
+                        <>
                             {
                                 user?.uid ?
                                     <>
@@ -61,8 +61,8 @@ const Header = () => {
                                         <Link to='/register'>Register</Link>
                                     </>
                             }
-                        </Nav.Link>
-                        <Nav.Link eventKey={2} href="#memes">
+                        </>
+                        <Link to='/profile'>
 
                             {
                                 user?.photoURL ?
@@ -71,7 +71,7 @@ const Header = () => {
                             }
 
 
-                        </Nav.Link>
+                        </Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

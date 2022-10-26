@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 
 
@@ -57,7 +57,9 @@ const Login = () => {
                 </Form.Text>
             </Form>
 
-
+            <div>
+                <p>Don't have an account? <Link to='/register'>Register Now!</Link> </p>
+            </div>
         </div>
     );
 };
