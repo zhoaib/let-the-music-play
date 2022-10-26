@@ -27,12 +27,12 @@ const Register = () => {
     return (
         <div>
             <Form onSubmit={handleSubmit}>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Group className="mb-3" controlId="formBasicName">
                     <Form.Label>Full Name</Form.Label>
                     <Form.Control name='name' type="text" placeholder="Full Name" required />
 
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Group className="mb-3" controlId="formBasicPhotoURL">
                     <Form.Label>Photo URL</Form.Label>
                     <Form.Control name="photoURL" type="text" placeholder="Photo URL" />
 
