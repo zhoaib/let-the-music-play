@@ -7,6 +7,7 @@ import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 
 
+
 const SideNav = () => {
 
     const { providerLogin } = useContext(AuthContext);
@@ -42,18 +43,22 @@ const SideNav = () => {
     }, [])
 
     return (
-        <div>
-            <div>
+        <div >
+
+
+
+            <div className='mt-5 '>
                 <ButtonGroup size="sm" className="mb-2">
-                    <Button onClick={handleGoogleSignIn} className='me-2'><FaGoogle></FaGoogle>  Login with Google</Button>
-                    <Button onClick={handleGithubSignIn}><FaGithub></FaGithub> Login with Github</Button>
+                    <Button variant='dark' onClick={handleGoogleSignIn} className='me-2'><FaGoogle></FaGoogle>  Login with Google</Button>
+                    <Button variant='dark' onClick={handleGithubSignIn}><FaGithub></FaGithub> Login with Github</Button>
                 </ButtonGroup>
             </div>
-            <h2>Course Category: {categories.length}</h2>
-            <div>
+
+            <h2 className='mt-4'>Our Total Course : {categories.length}</h2>
+            <div className='mt-5 mb-5 '>
                 {
                     categories.map(category => <p key={category.id}>
-                        <Link to={`/category/${category.id}`}>{category.name}</Link>
+                        <Button className='w-100 mb-3' variant='dark'><Link className='text-decoration-none text-light' to={`/category/${category.id}`}>{category.name}</Link></Button>
                     </p>)
                 }
             </div>

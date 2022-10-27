@@ -32,6 +32,14 @@ const Login = () => {
             })
 
 
+
+
+
+
+
+
+
+
     }
     return (
         <div>
@@ -48,7 +56,7 @@ const Login = () => {
                 </Form.Group>
 
 
-                <Button variant="primary" type="submit">
+                <Button variant="dark" type="submit">
                     Login
                 </Button>
                 <br />
@@ -57,8 +65,10 @@ const Login = () => {
                 </Form.Text>
             </Form>
 
-            <div>
-                <p>Don't have an account? <Link to='/register'>Register Now!</Link> </p>
+
+
+            <div className='mt-4'>
+                <p>Don't have an account? <Link className='text-decoration-none text-success' to='/register'>Register Now!</Link> </p>
             </div>
         </div>
     );

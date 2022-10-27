@@ -22,7 +22,7 @@ const Home = () => {
 
 
 
-            <div className='w-25 mx-auto mt-4'>
+            <div className='w-25 mx-auto mt-4 mb-5'>
                 <CourseCarousel></CourseCarousel>
             </div>
         </div>

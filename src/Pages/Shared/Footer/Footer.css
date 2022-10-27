@@ -1,0 +1,14 @@
+.footer {
+
+    bottom: 0;
+
+    position: bottom;
+    width: 100%;
+    height: 40vh;
+}
+
+.foot {
+    text-align: center;
+    justify-items: center;
+    padding: 40px;
+}

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -19,9 +19,9 @@ const Courses = () => {
     const { name, picture, details } = courses;
     return (
         <>
-            <Button variant='success' onClick={handlePrint}>Download PDF</Button>
+            <Button className='mb-3' variant='dark' onClick={handlePrint}>Download PDF</Button>
             <div ref={componentRef} style={{ width: '100%', height: window.innerHeight }}>
-                <Card className='w-75' >
+                <Card className='w-75 mx-auto' >
                     <Card.Img variant="top" src={picture} />
                     <Card.Body>
                         <Card.Title>{name}</Card.Title>
@@ -33,8 +33,9 @@ const Courses = () => {
                 </Card>
             </div>
             <div className='text-center mb-5'>
-                <Button variant="dark"><Link to='/checkout'>Get premium access</Link></Button>
+                <Button variant="dark"><Link className='text-decoration-none text-light' to='/checkout'>Get premium access</Link></Button>
             </div>
+
         </>
     );
 };

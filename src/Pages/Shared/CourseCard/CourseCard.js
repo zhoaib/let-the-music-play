@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
@@ -18,13 +19,15 @@ const CourseCard = ({ course }) => {
                     {
                         details.length > 150 ?
                             <span>
-                                {details.slice(0, 150) + '...'} <Link to={`/courses/${id}`}>View Details</Link>
+                                {details.slice(0, 150) + '...'}
                             </span>
                             :
                             <p>{details}</p>
                     }
                 </Card.Text>
-
+                <div className='text-center'>
+                    <Button variant="dark"><Link className='text-decoration-none text-light' to={`/courses/${id}`}>View Details</Link></Button>
+                </div>
             </Card.Body>
         </Card>
 

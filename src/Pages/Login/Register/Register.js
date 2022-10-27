@@ -66,7 +66,7 @@ const Register = () => {
                 </Form.Group>
 
 
-                <Button variant="primary" type="submit">
+                <Button variant="dark" type="submit">
                     Register
                 </Button>
                 <br />
@@ -74,8 +74,8 @@ const Register = () => {
                     {error}
                 </Form.Text>
             </Form>
-            <div>
-                <p>Already have an account? <Link to='/login'>Login Now!</Link> </p>
+            <div className='mt-4'>
+                <p>Already have an account? <Link className='text-decoration-none text-success' to='/login'>Login Now!</Link> </p>
             </div>
         </div>
     );
