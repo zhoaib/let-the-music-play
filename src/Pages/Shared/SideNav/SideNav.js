@@ -37,7 +37,7 @@ const SideNav = () => {
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/courses-categories')
+        fetch('https://let-the-music-play-server.vercel.app/courses-categories')
             .then(res => res.json())
             .then(data => setCategories(data));
     }, [])

@@ -20,17 +20,17 @@ export const routes = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/courses')
+                loader: () => fetch('https://let-the-music-play-server.vercel.app/courses')
             },
             {
                 path: '/category/:id',
                 element: <Category></Category>,
-                loader: ({ params }) => fetch(`http://localhost:5000/category/${params.id}`)
+                loader: ({ params }) => fetch(`https://let-the-music-play-server.vercel.app/category/${params.id}`)
             },
             {
                 path: '/courses/:id',
                 element: <Courses></Courses>,
-                loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
+                loader: ({ params }) => fetch(`https://let-the-music-play-server.vercel.app/courses/${params.id}`)
             },
             {
                 path: '/login',
